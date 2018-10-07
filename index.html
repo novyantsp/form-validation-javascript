@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="public/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="public/css/style.css">
+  <title>Form Validator Javascript</title>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md">
+        <h1>Form UKM</h1>
+      </div>
+    </div>
+    <hr>
+
+    <div class="row">
+      <div class="col-md">
+        <!--Start Form-->
+        <form class="" action="index.html" method="post" onsubmit="return validasi_input(this)">
+          <!--Form NRP!-->
+          <div class="form-group row">
+            <label for="NRP" class="col-sm-2 col-form-label">NRP</label>
+            <div class="col-sm-10">
+              <input type="text" name="NRP" class="form-control" id="NRP" placeholder="NRP" >
+              <small id="NRPhelp" class="form-text text-muted">*WAJIB -> 5 Digit Angka (12345)</small>
+            </div>
+          </div>
+
+          <!--Form Nama!-->
+          <div class="form-group row">
+            <label for="Nama" class="col-sm-2 col-form-label">Nama</label>
+            <div class="col-sm-10">
+              <input type="text" name="Nama" class="form-control" id="Nama" placeholder="Nama Lengkap" >
+              <small id="Namahelp" class="form-text text-muted">*WAJIB</small>
+            </div>
+          </div>
+
+          <!--Form Pilih UKM!-->
+          <fieldset class="form-group">
+            <div class="row">
+              <legend class="col-form-label col-sm-2 pt-0">Pilih UKM</legend>
+              <div class="col-sm-10">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="ukm" id="sepakbola" value="sepakbola" checked>
+                  <label class="form-check-label" for="sepakbola">Sepak Bola</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="ukm" id="bulutangkis" value="bulutangkis">
+                  <label class="form-check-label" for="bulutangkis">Bulu Tangkis</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="ukm" id="renang" value="renang">
+                  <label class="form-check-label" for="renang">Renang</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="ukm" id="basket" value="basket">
+                  <label class="form-check-label" for="basket">Basket</label>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+
+          <!--BUtton Submit!-->
+          <div class="form-group row">
+            <div class="col-sm-10">
+              <button type="submit" class="btn btn-primary">Daftar</button>
+            </div>
+          </div>
+        </form>
+        <!--END Form-->
+      </div>
+    </div>
+  </div>
+
+<script type="text/javascript" src="public/js/validator.js"></script>
+</body>
+
+</html>
